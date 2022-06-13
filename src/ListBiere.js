@@ -33,8 +33,8 @@ class ListBiere extends React.Component {
                     {this.state.bieres.map((biere, id) =>
     
                         <li className='beer' key={id}>
-                            <div className="title">{biere.name}</div>
-                            <img className="glouglou" src={biere.image_url} />
+                            <div className="title foam">{biere.name}</div>
+                            <img className="glouglou liquid" src={biere.image_url} />
                             
                         </li>
 
