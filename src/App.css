@@ -41,6 +41,8 @@ img{
   margin-right: 10px;
   border-radius: 15px;
   margin-top: 10px;
+  background-image: url(https://i.pinimg.com/564x/e5/61/79/e56179a2a0546cdc7cc375005c92ccea.jpg);
+  background-position-y: 10p;
   
 }
 .title{
@@ -50,9 +52,9 @@ img{
   padding: 20px
 }
 .glouglou{
- padding-top: 15px;
+ 
 }
 .foam{
-  background-image: url(/img/Bg-Beer.png);
+  background-image: url(https://i.pinimg.com/564x/e5/61/79/e56179a2a0546cdc7cc375005c92ccea.jpg);
   background-size: 100%;
 }
