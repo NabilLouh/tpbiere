@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { withRouter } from './index';
 
 
 class ListBiere extends React.Component {
@@ -49,4 +50,4 @@ class ListBiere extends React.Component {
 }
 
 
-export default ListBiere;
+export default withRouter(ListBiere);

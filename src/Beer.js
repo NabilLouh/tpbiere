@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { withRouter } from './index';
 
 
 class Beer extends React.Component{
@@ -65,4 +66,4 @@ class Beer extends React.Component{
     }
 }
 
-export default Beer;
+export default withRouter(Beer);
