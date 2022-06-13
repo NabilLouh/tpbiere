@@ -14,8 +14,7 @@ class ListBiere extends React.Component {
     componentDidMount() {
         axios.get('https://api.punkapi.com/v2/beers').then(response => {
             this.setState({bieres: response.data})
-            console.log(response.data)
-            console.log(this.state.bieres)
+            {console.log(this.state.bieres)}
         })
 
     }
