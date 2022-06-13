@@ -51,6 +51,9 @@ class Beer extends React.Component{
                                 <img src="glass-1.jpg"/>
                                 <h3>EBC {UneBiere.ebc}</h3>
                             </div>
+
+
+                            <button>Commander</button>
                             
                             
                             
