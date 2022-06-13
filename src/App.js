@@ -1,13 +1,15 @@
 
 import './App.css';
+import React from 'react';
 
-function App() {
+
+export default function Header() {
   return (
     <div className="App">
-      
+      <h1 className="Ttl">Beer-Factory!!</h1>
       
     </div>
   );
 }
 
-export default App;
+
