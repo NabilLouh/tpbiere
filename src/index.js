@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Beer from './Beer'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route, useParams, useNavigate  } from 'react-router-dom';
+import ListBiere from './ListBiere';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,6 +15,9 @@ root.render(
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
+        <Route index element={<ListBiere />} />
+        <Route path="/biere/1/buzz" element={<Beer />}/>
+
         
       </Route>
     </Routes>
