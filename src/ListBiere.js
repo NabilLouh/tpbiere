@@ -29,14 +29,14 @@ class ListBiere extends React.Component {
         return (
             <div>
 
-                <ul class="ulbiere">
+                <ul className="ulbiere">
 
                     {this.state.bieres.map((biere, id) =>
-                       <Link to={"/biere/" + biere.id + "/" + biere.name } class="lienB">
-                            <li class="cardbiere" key={id}>
+                       <Link to={"/biere/" + biere.id + "/" + biere.name } className="lienB">
+                            <li className="cardbeer" key={id}>
                                 
-                                <div>{biere.name}</div>
-                                <img class="imgbiere" src={biere.image_url} />
+                                <div className="foam">{biere.name}</div>
+                                <img className="glouglou" src={biere.image_url} />
                                 
                             </li>
                         </Link>
