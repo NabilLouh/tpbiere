@@ -19,42 +19,47 @@ color: #4e1313;
 
 }
 
-ul{
-  display: flex;
-  flex-wrap: wrap;
 
-  
-}  
-li{
-  list-style: none;
-  font-size: 30px;
- 
-
-}
-
-img{
-  width: 50% ;
-  heigth: 50%
-}
 .beer{
-  background-color: rgb(116, 110, 103);
-  margin-right: 10px;
+  
   border-radius: 15px;
   margin-top: 10px;
-  background-image: url(https://i.pinimg.com/564x/e5/61/79/e56179a2a0546cdc7cc375005c92ccea.jpg);
-  background-position-y: 10p;
+  margin-bottom: -317px;
+
   
 }
-.title{
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
 
-  padding: 20px
+
+.foam{
+   
+    background-repeat: no-repeat;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 20px;
+    ;
+    font-weight: bold;
+    font-family: 'Leckerli One', cursive;
 }
 .glouglou{
  
+  height: 220px;
+  padding-top: 20px;
 }
-.foam{
+
+.ulbiere{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardbeer{
+  list-style: none;
+  margin: 38px;
+  border-radius: 5px;
+  padding: 15px;
+  width: 25%;
   background-image: url(https://i.pinimg.com/564x/e5/61/79/e56179a2a0546cdc7cc375005c92ccea.jpg);
-  background-size: 100%;
+  background-position-y: -130px;
+  background-repeat: no-repeat;
+
 }
