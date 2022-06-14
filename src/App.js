@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
 
-      <Header />
-      <Link to="/biere/1/buzz"></Link>
+      
+      
       
 
 

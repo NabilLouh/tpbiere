@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import { withRouter } from './index';
+import Header from './Header';
 
 
 
@@ -23,6 +24,7 @@ class Beer extends React.Component{
     render() {
         return (
             <div>
+                <Header />
                 {console.log(this.state.beer)}
                 <ul>
                     {this.state.beer.map((UneBiere, id) =>

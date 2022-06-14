@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { withRouter } from './index';
 import { Link, Outlet } from 'react-router-dom';
+import Header from './Header';
 
 
 class ListBiere extends React.Component {
@@ -9,6 +10,9 @@ class ListBiere extends React.Component {
         super(props)
         this.state = {
             bieres:[],
+            text: '',
+            page: false,
+            Button: <button disabled >RECHERCHE</button>,
         }
     }
 
@@ -16,11 +20,42 @@ class ListBiere extends React.Component {
     componentDidMount() {
         axios.get('https://api.punkapi.com/v2/beers').then(response => {
             this.setState({bieres: response.data})
-            {console.log(this.state.bieres)}
+           
         })
 
     }
 
+    componentDidUpdate() {
+        if (this.state.page == true) {
+            axios.get('https://api.punkapi.com/v2/beers').then(response => {
+            this.setState({bieres: response.data, page: false})
+            console.log(this.state.bieres)
+        })
+        }
+        
+    }
+
+    handleChange = (event) => {
+        this.setState({text: event.target.value})
+        if(event.target.value != '' ) {
+            this.setState({Button: <button enabled onClick={this.rechercher} >RECHERCHE</button>})
+        } else {
+            this.setState({Button: <button disabled >RECHERCHE</button>})
+        }
+
+    }
+
+    rechercher = (event) => {
+        axios.get('https://api.punkapi.com/v2/beers?beer_name=' + this.state.text).then(response => {
+            this.setState({bieres: response.data})
+            
+        })
+    }
+
+    accueil = (event) => {
+        this.setState({page: true})
+    }
+  
 
     render() {
 
@@ -28,6 +63,13 @@ class ListBiere extends React.Component {
 
         return (
             <div>
+                <div onClick={this.accueil}>
+                    <Header />
+                </div>
+                
+
+                <input type="text" placeholder='Hoppy, Malte, Angry...' name="text" value={this.state.text} onChange={this.handleChange}/>
+                <Link to={"/recherche/" + this.state.text }>{this.state.Button}</Link>
 
                 <ul className="ulbiere">
 
