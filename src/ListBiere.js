@@ -32,7 +32,7 @@ class ListBiere extends React.Component {
                 <ul class="ulbiere">
 
                     {this.state.bieres.map((biere, id) =>
-                       <Link to="/biere/1/buzz" class="lienB">
+                       <Link to={"/biere/" + biere.id + "/" + biere.name } class="lienB">
                             <li class="cardbiere" key={id}>
                                 
                                 <div>{biere.name}</div>

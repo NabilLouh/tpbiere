@@ -16,7 +16,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<ListBiere />} />
-        <Route path="/biere/1/buzz" element={<Beer />}/>
+        <Route path="/biere/:id/:name" element={<Beer />}/>
 
         
       </Route>

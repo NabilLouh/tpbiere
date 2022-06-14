@@ -15,7 +15,7 @@ class Beer extends React.Component{
 
 
     componentDidMount() {
-        axios.get('https://api.punkapi.com/v2/beers/1').then(response => {
+        axios.get('https://api.punkapi.com/v2/beers/' + this.props.router.params.id ).then(response => {
             this.setState({beer: response.data})
         })
     }
