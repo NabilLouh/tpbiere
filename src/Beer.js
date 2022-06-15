@@ -1,8 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-
-import { withRouter } from './index';
 import Header from './Header';
+import { withRouter } from './index';
 
 
 
@@ -23,42 +22,45 @@ class Beer extends React.Component{
     
     render() {
         return (
-            <div>
-                <Header />
+            <div >
+                <div onClick={this.accueil}>
+                    <Header />
+                </div>
+
                 {console.log(this.state.beer)}
-                <ul>
+                <ul className='Beer-card'>
                     {this.state.beer.map((UneBiere, id) =>
 
-                        <li key = {id}>
-                            <div>
-                                <img src={UneBiere.image_url} />
-                                <div>
+                        <li className='instruction' key = {id}>
+                            <div className='ipal'>
+                                <img className='indiv-beer' src={UneBiere.image_url} />
+                                <div className='AOP'>
                                     <h1>{UneBiere.name}</h1>
-                                    <div>{UneBiere.description}</div>
-                                    <div>Alc. {UneBiere.abv}</div>
+                                    <div className='desc'>{UneBiere.description}</div>
+                                    <div className='dgre'>Alc. <span className='grass'>{UneBiere.abv}</span></div>
                                 </div>
                             </div>
-                            
-                            <div>
-                                
-                                <ul> <h1>Food Pairing :</h1>
-                                    {UneBiere.food_pairing.map((food, index) =>
-                                        <li key={index} >
-                                            {food}
-                                        </li>
+                            <div className='grup'>
+                                <div>
+                                    
+                                    <ul className='foodWars'> 
+                                        <h1> Association Nourriture/Bière :</h1>
+                                        {UneBiere.food_pairing.map((food, index) =>
+                                            <li className='food' key={index} >
+                                                {food}
+                                            </li>
 
-                                    )}
-                                </ul>
-                                <h1>Ibu {UneBiere.ibu}</h1>
+                                        )}
+                                    </ul>
+                                    <h1 className="ibu">Ibu {UneBiere.ibu}</h1>
+                                </div>
+                                <div className='log'>
+                                    <img src="/img/glass-3-removebg-preview.png"/>
+                                    <h1 className='moove'>EBC {UneBiere.ebc}</h1>
+                                </div>
+
                             </div>
-                            <div>
-
-                                <img src={"glass-1.jpg"}/>
-                                <h3>EBC {UneBiere.ebc}</h3>
-                            </div>
-
-
-                            <button>Commander</button>
+                            <button className='bouton'>Commander</button>
                             
                             
                             
