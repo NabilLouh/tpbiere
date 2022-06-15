@@ -135,6 +135,7 @@ flex-wrap: wrap;
 }
 .desc{
   text-justify: justify ;
+  padding-right: 50px;
 }
 
 .dgre{
@@ -155,8 +156,8 @@ flex-wrap: wrap;
 }
 .log{
   position: relative;
-  top: 16px;
-  left: 231px;
+  top: 0px;
+  left: 500px;
 }
 .moove{
   position:relative;
@@ -181,4 +182,11 @@ flex-wrap: wrap;
   color: #fffbf7;
   border:#fff solid 0px;  
 
+}
+
+
+.ibu {
+  position:relative;
+  top:140px;
+  left:0px
 }

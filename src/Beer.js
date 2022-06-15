@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-
+import Header from './Header';
 import { withRouter } from './index';
 
 
@@ -23,6 +23,10 @@ class Beer extends React.Component{
     render() {
         return (
             <div >
+                <div onClick={this.accueil}>
+                    <Header />
+                </div>
+
                 {console.log(this.state.beer)}
                 <ul className='Beer-card'>
                     {this.state.beer.map((UneBiere, id) =>
@@ -48,11 +52,11 @@ class Beer extends React.Component{
 
                                         )}
                                     </ul>
-                                    <h1>Ibu {UneBiere.ibu}</h1>
+                                    <h1 className="ibu">Ibu {UneBiere.ibu}</h1>
                                 </div>
                                 <div className='log'>
                                     <img src="/img/glass-3-removebg-preview.png"/>
-                                    <h3 className='moove'>EBC {UneBiere.ebc}</h3>
+                                    <h1 className='moove'>EBC {UneBiere.ebc}</h1>
                                 </div>
 
                             </div>
