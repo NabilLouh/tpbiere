@@ -35,13 +35,12 @@ class Beer extends React.Component{
                                 <div>
                                     <h1>{UneBiere.name}</h1>
                                     <div>{UneBiere.description}</div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div>
                                     <div>Alc. {UneBiere.abv}</div>
                                 </div>
+                            </div>
+                            
+                            <div>
+                                
                                 <ul> <h1>Food Pairing :</h1>
                                     {UneBiere.food_pairing.map((food, index) =>
                                         <li key={index} >
@@ -53,7 +52,8 @@ class Beer extends React.Component{
                                 <h1>Ibu {UneBiere.ibu}</h1>
                             </div>
                             <div>
-                                <img src="glass-1.jpg"/>
+
+                                <img src={"glass-1.jpg"}/>
                                 <h3>EBC {UneBiere.ebc}</h3>
                             </div>
 
