@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-
+import { withRouter } from './index';
+import { Link, Outlet } from 'react-router-dom';
 
 
 class ListBiere extends React.Component {
@@ -28,15 +29,18 @@ class ListBiere extends React.Component {
         return (
             <div>
 
-                <ul className='ulbiere'>
+                <ul className="ulbiere">
 
                     {this.state.bieres.map((biere, id) =>
-    
-                        <li className='cardbeer' key={id}>
-                            <div className="foam">{biere.name}</div>
-                            <img className="glouglou" src={biere.image_url} />
-                            
-                        </li>
+                       <Link to={"/biere/" + biere.id + "/" + biere.name } className="lienB">
+                            <li className="cardbeer" key={id}>
+                                
+                                <div className="foam">{biere.name}</div>
+                                <img className="glouglou" src={biere.image_url} />
+                                
+                            </li>
+                        </Link>
+                                
 
                     )}
 
@@ -50,4 +54,4 @@ class ListBiere extends React.Component {
 }
 
 
-export default ListBiere;
+export default withRouter(ListBiere);

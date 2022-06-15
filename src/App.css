@@ -1,6 +1,7 @@
 body{
 background: linear-gradient(-30deg,  #000 0%,#9b5600 50%, #dcba06 70%, #fff 100%);
 background-repeat: no-repeat;
+
 }
 .App {
   text-align: center;
@@ -10,15 +11,56 @@ background-repeat: no-repeat;
 .Ttl{
   font-family: 'Kaushan Script', cursive;
   transform: rotate(-9deg);
-  font-size: 70px;
+  font-size: 60px;
   text-align: center;
   margin-left: 108px;
   color: #ffffffcb;
-  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
-  color: #4e1313;
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+color: #4e1313;
+
 
 }
 
+.Bieretitre {
+  text-decoration: none;
+}
+
+/*
+.cardbiere {
+list-style: none;
+background-color: white;
+margin: 20px;
+border-radius: 5px;
+padding:15px;
+
+
+}
+
+.imgbiere {
+height: 400px;
+padding-top:20px;
+
+
+}
+
+
+.ulbiere {
+display:flex;
+flex-wrap: wrap;
+} */
+
+.lienB {
+  width: 25%;
+  text-decoration: none;
+  color: black;
+  margin: 25px;
+  transition: 1.5s;
+}
+
+.lienB:hover{
+  transform: rotate(-8deg) scale(1.1) ;
+  
+}
 
 .beer{
   
@@ -36,7 +78,7 @@ background-repeat: no-repeat;
     padding-bottom: 2px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    font-size: 20px;
+    font-size: 18px;
     ;
     font-weight: bold;
     font-family: 'Leckerli One', cursive;
@@ -50,6 +92,7 @@ background-repeat: no-repeat;
 .ulbiere{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .cardbeer{
@@ -57,9 +100,85 @@ background-repeat: no-repeat;
   margin: 38px;
   border-radius: 15px;
   padding: 18px;
-  width: 25%;
+ 
   background-image: url(https://i.pinimg.com/564x/e5/61/79/e56179a2a0546cdc7cc375005c92ccea.jpg);
-  background-position-y: -140px;
+  background-position-y: -120px;
   background-repeat: no-repeat;
+
+}
+
+.instruction {
+  list-style: none;
+
+}
+.Beer-card{
+  background-color: rgb(236, 211, 24);
+  width: 70% ;
+  margin-left: 180px;
+  background: rgba( 128, 52, 52, 0.3 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 1px );
+  -webkit-backdrop-filter: blur( 1px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+.indiv-beer{
+  width: 25%;
+  max-height: 438px;
+  margin-top: 25px;
+  margin-left: 46px;
+  margin-right: 46px;
+}
+
+.ipal{
+  display: flex;
+}
+.desc{
+  text-justify: justify ;
+}
+
+.dgre{
+  font-size: 23px;
+  text-align: start;
+  position: absolute;
+  top: 424px;
+
+}
+.grass{
+  font-weight: bold;
+}
+.grup{
+  display: flex;
+}
+.food{
+  list-style: url(../public/img/dessert-donut-doughnut-svgrepo-com.svg);
+}
+.log{
+  position: relative;
+  top: 16px;
+  left: 231px;
+}
+.moove{
+  position:relative;
+  left: -29px ;
+  color: rgb(192, 186, 186,34);
+}
+
+.bouton{
+  height: 60px;
+  width: 150px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  background-color: #FF0808;
+  color: #ffffff;
+}
+
+.bouton:hover{
+  -webkit-box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, 5px 5px 15px 5px rgba(0,0,0,0);
+  transform: rotate(-12deg);
+  color: #fffbf7;
+  border:#fff solid 0px;  
 
 }
